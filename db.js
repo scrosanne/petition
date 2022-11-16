@@ -8,7 +8,10 @@ const password = PASSWORD;
 const database = "petition";
 // this establishes the connection to the db
 // it get's a connection string as an argument
-const db = spicedPg(`postgres:${user}:${password}@localhost:5432/${database}`);
+const db = spicedPg(
+    process.env.DATABASE_URL ||
+        `postgres:${user}:${password}@localhost:5432/${database}`
+);
 
 // * * * * * * * * * * * *  G E T  D A T A  * * * * * * * * * * * * *
 
