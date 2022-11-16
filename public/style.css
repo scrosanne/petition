@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.container-left {
+    grid-column: 1/2;
+    background-color: antiquewhite;
+    border: 10px solid white;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-height: 100vh;
+}
+.container-left img {
+    object-fit: cover;
+    border: 5px solid white;
+    height: 50vh;
+}
+
+.container-right {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 30vh 50vh 20vh;
+    background-color: FFD335;
+    border: 10px solid white;
+    max-height: 100vh;
+}
+
+#right-top {
+    grid-row: 1/2;
+    background-color: FFD335;
+    /* border: 1px solid white; */
+}
+
+#right-mid {
+    grid-row: 2/3;
+    background-color: FFD335;
+    /* border: 1px solid white; */
+}
+
+#right-bottom {
+    grid-row: 3/4;
+    background-color: FFD335;
+    /* border: 1px solid white; */
+}
+
+#title {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 2em;
+    letter-spacing: 0.4em;
+    text-align: right;
+
+    color: white;
+    text-align: right;
+    padding: 5%;
+}
+
+span {
+    color: #832eef;
+}
+
+.signers {
+    font-size: 1.2em;
+    font-weight: 200;
+    line-height: 1.5em;
+    letter-spacing: 0.27em;
+    text-transform: uppercase;
+    text-align: right;
+    color: #ffffff;
+    text-align: right;
+    padding: 5%;
+    padding-bottom: 0;
+}
+
+.signers a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.signers a:hover {
+    color: #832eef;
+    font-style: italic;
+}
+
+#deleteSign {
+    font-size: 1em;
+    font-weight: 200;
+    line-height: 1.5em;
+    letter-spacing: 0.27em;
+    text-transform: uppercase;
+    text-align: right;
+    color: #ffffff;
+    text-align: right;
+    background-color: FFD335;
+    text-decoration: underline;
+    border: 1px solid gold;
+    text-decoration: none;
+}
+
+#deleteSign:hover {
+    text-decoration: line-through;
+}
+
+/**** F O R M  ****/
+form {
+    padding: 5% 0 5% 10%;
+}
+
+.form-style {
+    font-weight: 300;
+    color: white;
+
+    background-color: FFD335;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 8px 10px 0px 0px #b07f01a6;
+
+    margin: 12px;
+}
+
+input {
+    width: 200px;
+    height: 35px;
+
+    padding: 5px;
+}
+
+#submit {
+    width: 100px;
+    height: 35px;
+    margin-left: 110px;
+
+    background-color: #832eef;
+    border: 1px solid #832eef;
+}
+
+#arrow {
+    /* width: 82.77px;
+    height: 74.47px;
+
+    border: 6px solid #ffffff;
+    transform: matrix(-0.29, -0.96, -0.96, 0.29, 0, 0); */
+}

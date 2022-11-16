@@ -1,0 +1,30 @@
+<div class="container-left">
+    <img src="/hausc.jpg" alt="img3" />
+    <img src="/hausa.jpg" alt="img1" />
+</div>
+
+<div class="container-right">
+    <div id="right-top">
+        <h4 id="title">
+
+            who else joined in this petition?
+        </h4>
+
+    </div>
+
+    <div id="right-mid">
+
+        <div class="signers">
+            {{#signers}}
+                <a href="{{url}}">{{firstname}}</a>
+                {{lastname}}
+                {{age}}
+                <a href="/signers/{{city}}">{{city}}</a>
+                <br />
+            {{/signers}}
+        </div>
+
+    </div>
+
+    <div id="right-bottom"></div>
+</div>

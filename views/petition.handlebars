@@ -1,0 +1,135 @@
+<div class="container-left">
+    <img src="/hausc.jpg" alt="img3" />
+    <img src="/hausa.jpg" alt="img1" />
+</div>
+
+<div class="container-right">
+    <div id="right-top">
+        <h4 id="title">
+            petition for more
+            <br />
+            <span>variety</span>
+            in residental
+            <br />
+            architecture
+        </h4>
+
+        {{#message}}
+            {{error}}
+        {{/message}}
+
+    </div>
+
+    <div id="right-mid">
+
+        <form method="post">
+
+            {{! <input
+                class="form-style"
+                type="text"
+                id="fname"
+                name="fname"
+                value="First Name"
+            /><br />
+
+            <input
+                class="form-style"
+                type="text"
+                id="lname"
+                name="lname"
+                value="Last Name"
+            /><br /> }}
+
+            <canvas
+                class="form-style"
+                id="myCanvas"
+                width="200"
+                height="100"
+            ></canvas>
+            <input type="hidden" id="signature" name="signature" />
+            <br />
+
+            <button class="form-style" id="submit" type="submit">submit</button>
+
+        </form>
+
+    </div>
+
+    <div id="right-bottom">
+        <!-- <div id="arrow"></div> -->
+    </div>
+</div>
+
+{{! 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <!-- poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- poppins -->
+        <script src="script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container-left">
+            <!-- img -->
+        </div>
+
+        <div class="container-right">
+            <div id="right-top">
+                <h4 id="title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Natus, placeat?
+                </h4>
+            </div>
+
+            <div id="right-mid">
+                <form action="/action_page.php">
+                    <input
+                        class="form-style"
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        value="First Name"
+                    /><br />
+
+                    <input
+                        class="form-style"
+                        type="text"
+                        id="lname"
+                        name="lname"
+                        value="Last Name"
+                    /><br />
+
+                    <canvas
+                        class="form-style"
+                        id="myCanvas"
+                        value="Last Name"
+                    ></canvas>
+                    <br />
+
+                    <input
+                        class="form-style"
+                        id="submit"
+                        type="submit"
+                        value="Submit"
+                    />
+                </form>
+            </div>
+
+            <div id="right-bottom">
+                <!-- <div id="arrow"></div> -->
+            </div>
+        </div>
+    </body>
+</html> }}

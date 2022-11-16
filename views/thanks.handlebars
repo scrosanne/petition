@@ -1,0 +1,47 @@
+<div class="container-left">
+    <img src="/hausc.jpg" alt="img3" />
+    <img src="/hausa.jpg" alt="img1" />
+</div>
+
+<div class="container-right">
+    <div id="right-top">
+    </div>
+
+    <div id="right-mid">
+
+        <h4 id="title">
+            Thank You!
+            <span>{{name}}</span>
+            <br />
+
+            <br />
+            {{#image}}
+                <img src="{{signature}}" , alt="signature" />
+            {{/image}}
+
+            <br />
+
+        </h4>
+
+        <div class="signers">
+            <a href="http://localhost:8080/signers">{{count}}
+                signed the petition as well</a>
+            <br />
+
+            <a href="http://localhost:8080/profile/edit">
+                edit your profile</a>
+            <br />
+
+        </div>
+
+    </div>
+
+    <div id="right-bottom">
+        <div class="signers">
+            <form name="delete" action="/signature/delete" method="POST">
+                <button type="submit" value="submit" id="deleteSign">delete your
+                    signature</button>
+            </form>
+        </div>
+    </div>
+</div>
