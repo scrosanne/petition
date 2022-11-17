@@ -45,7 +45,7 @@ router.post("/petition", (req, res) => {
 
 //*******************************************
 
-//THANKS
+//T H A N K S / / /
 router.get("/thanks", (req, res) => {
     if (!req.session.userData) {
         res.redirect("/register");
@@ -56,19 +56,21 @@ router.get("/thanks", (req, res) => {
         getSigners(),
         getSignaturebyId(req.session.userData.id),
         getSignersWithMoreInfo(req.session.userData.id),
-    ]).then((result) => {
-        //result[1] contains signature
-        const count = result[0].rowCount;
-        const name = result[2].rows[0].firstname;
-        const sign = result[1].rows;
+    ])
+        .then((result) => {
+            //result[1] contains signature
+            const count = result[0].rowCount;
+            const name = result[2].rows[0].firstname;
+            const sign = result[1].rows;
 
-        res.render("thanks", { name, count, image: sign });
-    });
+            res.render("thanks", { name, count, image: sign });
+        })
+        .catch((err) => console.log(err));
 });
 
 //*******************************************
 
-//LIST SIGNERS
+//L I S T  S I G N E R S / / /
 router.get("/signers", (req, res) => {
     if (!req.session.userData) {
         res.redirect("/register");
@@ -80,7 +82,7 @@ router.get("/signers", (req, res) => {
     });
 });
 
-//LIST CITY
+//L I S T  C I T Y / / / /
 router.get("/signers/:city", (req, res) => {
     if (!req.session.userData) {
         res.redirect("/register");

@@ -61,9 +61,11 @@ router.post("/profile/edit", (req, res) => {
                 url: homepage,
                 user_id: req.session.userData.id,
             }),
-        ]).then(() => {
-            res.redirect("/thanks");
-        });
+        ])
+            .then(() => {
+                res.redirect("/thanks");
+            })
+            .catch((err) => console.log(err));
     } else {
         Promise.all([
             editUsersWithoutPassword({
@@ -78,41 +80,12 @@ router.post("/profile/edit", (req, res) => {
                 url: homepage,
                 user_id: req.session.userData.id,
             }),
-        ]).then(() => {
-            res.redirect("/thanks");
-        });
+        ])
+            .then(() => {
+                res.redirect("/thanks");
+            })
+            .catch((err) => console.log(err));
     }
-
-    // if (password) {
-    //     // const salt = bcrypt.genSaltSync();
-    //     // const hashedEdit = bcrypt.hashSync(password, salt);
-
-    //     editUsersWithPassword({
-    //         firstname: fname,
-    //         lastname: lname,
-    //         email: email,
-    //         password: hashedEdit,
-    //         id: req.session.userData.id,
-    //     });
-    //     return;
-    // }
-
-    // editProfiles({
-    //     age: age,
-    //     city: city,
-    //     url: homepage,
-    //     user_id: req.session.userData.id,
-    // });
-
-    // if (!password) {
-    //     editUsersWithoutPassword({
-    //         firstname: fname,
-    //         lastname: lname,
-    //         email: email,
-    //         id: req.session.userData.id,
-    //     });
-    //     return;
-    // }
 });
 
 // / / / / / / / D E L E T E  S I G N A T U R E  / / / / / / /

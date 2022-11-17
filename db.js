@@ -18,9 +18,6 @@ const db = spicedPg(
 function getSignaturebyId(id) {
     return db.query("SELECT signature FROM signatures WHERE userid = $1", [id]);
     // .then((result) => result.rows[0]);
-    // return new Promise((resolve, reject) => {
-    //     resolve({ id: 0, fname: "name", lname: "lname", signature: "sign" });
-    // });
 }
 
 function getPasswordAndMoreByEmail(email) {
@@ -83,16 +80,6 @@ function editUsersWithoutPassword({ firstname, lastname, email, id }) {
         [firstname, lastname, email, id]
     );
 }
-
-// //  E D I T  USER_PROFILES
-// function editProfiles({ age, city, url, user_id }) {
-//     return db.query(
-//         `UPDATE user_profiles
-//                     SET age=$1, city=$2, url=$3
-//                     WHERE user_id=$4`,
-//         [age, city, url, user_id]
-//     );
-// }
 
 //  E D I T  USER_PROFILES
 function editProfiles({ age, city, url, user_id }) {

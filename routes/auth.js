@@ -67,7 +67,7 @@ router.post("/register", (req, res) => {
         email: email,
         password: hashedRegisterInput,
     }).then((userData) => {
-        req.session.userData = userData; //add new property with daa from users table to session object
+        req.session.userData = userData; //add new property with data from users table to session object
         res.redirect("/profile");
     });
 });
