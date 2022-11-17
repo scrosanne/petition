@@ -22,7 +22,7 @@ CREATE TABLE user_profiles(
 	url VARCHAR(255)
 );
 
-ALTER TABLE signatures ADD COLUMN user_id INTEGER;
+ALTER TABLE signatures ADD COLUMN userid INTEGER;
 
 ALTER TABLE signatures DROP COLUMN firstname;
 ALTER TABLE signatures DROP COLUMN lastname;

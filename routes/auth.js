@@ -13,7 +13,7 @@ const {
 
 router.get("/", function (req, res) {
     //check cookies, already registered or logged in?
-    if (!req.session.userId) {
+    if (!req.session.userData) {
         res.redirect("/register");
     } else {
         if (req.session.hasSigned) {

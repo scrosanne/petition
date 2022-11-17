@@ -7,13 +7,16 @@ const cookieSession = require("cookie-session");
 const handlebars = require("express-handlebars");
 const { engine } = require("express-handlebars");
 
+// / / router / / / / /
 const authRouter = require("./routes/auth");
 const petitionRouter = require("./routes/petition");
 const editRouter = require("./routes/edit");
 
+// / / handlebars / / / / /
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
 
+// / / global middleware / / / / /
 app.use(express.urlencoded());
 
 app.use(express.static(path.join(__dirname, "public")));

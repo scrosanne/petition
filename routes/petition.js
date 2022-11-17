@@ -14,7 +14,7 @@ const {
 
 // / / / / / / S I G N A T U R E  / / /
 router.get("/petition", (req, res) => {
-    if (req.session.userData || req.session.logIn) {
+    if (req.session.userData) {
         if (req.session.hasSigned) {
             res.redirect("/thanks");
         }

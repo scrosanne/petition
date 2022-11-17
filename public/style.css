@@ -37,6 +37,15 @@ body {
     max-height: 100vh;
 }
 
+.container-right-new {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 15vh 50vh 20vh;
+    background-color: FFD335;
+    border: 10px solid white;
+    max-height: 100vh;
+}
+
 #right-top {
     grid-row: 1/2;
     background-color: FFD335;
@@ -105,7 +114,7 @@ span {
     text-align: right;
     background-color: FFD335;
     text-decoration: underline;
-    border: 1px solid gold;
+    border: 1px solid #ffd335;
     text-decoration: none;
 }
 
