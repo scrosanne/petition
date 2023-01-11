@@ -10,8 +10,8 @@ An online petition I built as my first project at Spiced Academy. Users can regi
 * PostgreSQL
 
 ## setup
-* npm install
-* nodemon index.js 
+* `npm install`
+* `nodemon index.js `
 * open http://localhost:3000 to view it in the browser
 
 ## screenshot
